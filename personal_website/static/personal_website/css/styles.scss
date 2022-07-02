@@ -1,0 +1,154 @@
+body {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+section {
+  min-height: 10vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #a9a9a9;
+}
+
+/* Responsiveness Stuff */
+@media (max-width: 768px) {
+  #Contact {
+    padding: 20% 20% 30% 20%;
+  }
+
+  nav {
+    position: fixed;
+    padding-right: 9%;
+    margin-top: 10%;
+    background-color: white;
+  }
+
+  #Home {
+    padding: 50% 0 50% 0;
+  }
+
+  #About div {
+    text-align: left;
+    padding: 100% 2% 60% 2%;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #Contact {
+    padding: 20% 30% 13% 30%;
+  }
+
+
+  nav {
+    position: fixed;
+    padding-right: 9%;
+    padding-top: 3%;
+  }
+
+  #Home {
+    padding: 20% 0 20% 0;
+  }
+  
+  #About div {
+    text-align: left;
+    padding: 20% 32% 20% 32%;
+    font-size: 2rem;
+  }
+}
+
+/* Navigation Bar */
+
+.navbar-brand {
+  font-size: 6.2rem;
+  line-height: 5%;
+  font-family: 'League Spartan', sans-serif;
+  padding-left: 9%;
+  padding-top: 2.6%;
+}
+
+
+
+.nav-item {
+  font-size: 2rem;
+  padding: 3.2% 0 4% 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+  padding-left: 1rem;
+}
+
+/* Title */
+
+
+
+.title h1 {
+  font-size: 4rem;
+  font-family: 'League Spartan', sans-serif;
+}
+
+/* About */
+
+#About p {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Work */
+#Work .container {
+  padding: 20% 0 20% 0
+}
+
+
+.project-img {
+  width: 350px;
+  margin: inherit;
+}
+
+.project {
+  margin: auto;
+  text-align: left;
+  width: 350px;
+}
+
+.description {
+  width: 350px;
+}
+
+/* Contact */
+
+.thick-border {
+  border: 4px solid black;
+  border-radius: 0;
+}
+
+#Contact button {
+  border-radius: 0;
+  float: left;
+}
+
+.form-title {
+  text-align: left;
+  margin-bottom: 10%;
+}
+
+/* Footer */
+#Footer {
+  color: #a9a9a9;
+  min-height: 5vh;
+  padding-bottom: 1%;
+
+  a {
+    color: #a9a9a9;
+  }
+
+  a:hover {
+    color: black;
+  }
+}
