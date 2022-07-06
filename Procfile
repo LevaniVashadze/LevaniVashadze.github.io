@@ -1,1 +1,1 @@
-web: gunicorn Levani.wsgi.application
+web: gunicorn levani.wsgi
