@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-g*em=hphgg@=1ux!mzb-k!c%o7vq)x%kf=#l&43q+86&@1li3s
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'levani.herokuapp.com'
+    'levani.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
