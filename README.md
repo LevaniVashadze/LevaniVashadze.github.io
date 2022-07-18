@@ -1,5 +1,5 @@
 # Personal_Website
-Website is built with HTML, CSS and python for the backend using Django. Additionally I used Bootstrap and saas.
+Simple static Website.
 
 Work in Progress
 
