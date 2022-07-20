@@ -3,4 +3,4 @@ Simple static Website.
 
 Work in Progress
 
-URL: https://levani.herokuapp.com/
+URL: https://levani.is-a.dev
