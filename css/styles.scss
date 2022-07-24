@@ -138,6 +138,11 @@ a:hover {
   margin-bottom: 10%;
 }
 
+.form-control:focus {
+  border-color: black;
+  box-shadow: none;
+}
+
 /* Footer */
 #Footer {
   color: #a9a9a9;
@@ -146,6 +151,7 @@ a:hover {
 
   a {
     color: #a9a9a9;
+    margin-right: 5px;
   }
 
   a:hover {
