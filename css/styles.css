@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 section {
@@ -27,16 +27,12 @@ a:hover {
     margin-top: 10%;
     background-color: white;
   }
-  #Home {
-    padding: 50% 0 50% 0;
-  }
   #About div {
     text-align: left;
     padding: 100% 2% 60% 2%;
     font-size: 2rem;
   }
 }
-
 @media (min-width: 768px) {
   #Contact {
     padding: 20% 30% 13% 30%;
@@ -46,21 +42,17 @@ a:hover {
     padding-right: 9%;
     padding-top: 3%;
   }
-  #Home {
-    padding: 20% 0 20% 0;
-  }
   #About div {
     text-align: left;
     padding: 20% 32% 20% 32%;
     font-size: 2rem;
   }
 }
-
 /* Navigation Bar */
 .navbar-brand {
   font-size: 6.2rem;
   line-height: 5%;
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
   padding-left: 9%;
   padding-top: 2.6%;
 }
@@ -76,14 +68,18 @@ a:hover {
 }
 
 /* Title */
+#Home {
+  padding: 50% 0 50% 0;
+}
+
 .title h1 {
   font-size: 4rem;
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 /* About */
 #About p {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /* Work */
@@ -124,8 +120,7 @@ a:hover {
 
 .form-control:focus {
   border-color: black;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 /* Footer */
@@ -134,13 +129,12 @@ a:hover {
   min-height: 5vh;
   padding-bottom: 1%;
 }
-
 #Footer a {
   color: #a9a9a9;
   margin-right: 5px;
 }
-
 #Footer a:hover {
   color: black;
 }
+
 /*# sourceMappingURL=styles.css.map */
