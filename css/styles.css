@@ -27,6 +27,9 @@ a:hover {
     margin-top: 10%;
     background-color: white;
   }
+  #Home {
+    padding: 50% 0 50% 0;
+  }
   #About div {
     text-align: left;
     padding: 100% 2% 60% 2%;
@@ -41,6 +44,9 @@ a:hover {
     position: fixed;
     padding-right: 9%;
     padding-top: 3%;
+  }
+  #Home {
+    padding: 20% 0 20% 0;
   }
   #About div {
     text-align: left;
@@ -68,10 +74,6 @@ a:hover {
 }
 
 /* Title */
-#Home {
-  padding: 50% 0 50% 0;
-}
-
 .title h1 {
   font-size: 4rem;
   font-family: "League Spartan", sans-serif;
