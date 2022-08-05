@@ -17,7 +17,7 @@ a:hover {
 }
 
 /* Responsiveness Stuff */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   #Contact {
     padding: 20% 20% 30% 20%;
   }
@@ -40,7 +40,7 @@ a:hover {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #Contact {
     padding: 20% 30% 13% 30%;
   }
