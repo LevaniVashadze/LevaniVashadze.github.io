@@ -125,8 +125,14 @@ a:hover {
   box-shadow: none;
 }
 
+.kofi {
+  display: block;
+  padding-bottom: 1rem;
+}
+
 /* Footer */
 #Footer {
+  display: block;
   color: #a9a9a9;
   min-height: 5vh;
   padding-bottom: 1%;
