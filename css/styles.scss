@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 section {
@@ -45,7 +45,6 @@ a:hover {
     padding: 20% 30% 13% 30%;
   }
 
-
   nav {
     position: fixed;
     padding-right: 9%;
@@ -68,12 +67,10 @@ a:hover {
 .navbar-brand {
   font-size: 6.2rem;
   line-height: 5%;
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
   padding-left: 9%;
   padding-top: 2.6%;
 }
-
-
 
 .nav-item {
   font-size: 2rem;
@@ -89,20 +86,19 @@ a:hover {
 
 .title h1 {
   font-size: 4rem;
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 /* About */
 
 #About p {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /* Work */
 #Work .container {
-  padding: 20% 0 20% 0
+  padding: 20% 0 20% 0;
 }
-
 
 .project-img {
   width: 350px;
@@ -113,6 +109,7 @@ a:hover {
   margin: auto;
   text-align: left;
   width: 350px;
+  margin-bottom: 2rem;
 }
 
 .description {
