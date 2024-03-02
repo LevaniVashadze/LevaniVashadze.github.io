@@ -9,7 +9,7 @@ const Contact = () => {
         id="Contact"
         className="flex h-screen items-center justify-center"
       >
-        <div className="lg:w-1/2 2xl:w-1/3">
+        <div className="px-4 lg:w-1/2 2xl:w-1/3">
           <h3 className="mb-4 text-3xl">{t("ContactText")}</h3>
           <form method="post" action="https://formspree.io/f/xoqrgvkg">
             <input
