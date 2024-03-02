@@ -8,14 +8,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        oswald: ["Oswald", "sans-serif"],
-        raleway: ["Raleway", "sans-serif"],
-        sparta: ["League Spartan", "sans-serif"],
+        oswald: ["Oswald", "Noto Sans Georgian", "sans-serif"],
+        raleway: ["Raleway", "Noto Sans Georgian", "sans-serif"],
+        sparta: ["League Spartan", "Noto Sans Georgian", "sans-serif"],
+      },
+      lineHeight: {
+        11: "2.75rem",
+        12: "3rem",
+        13: "3.25rem",
+        14: "3.5rem",
+        15: "3.75rem",
       },
     },
   },
-  plugins: [
-    // require('@tailwindcss/forms'),
-    require("preline/plugin"),
-  ],
+  plugins: [require("preline/plugin"), require("@tailwindcss/forms")],
 };

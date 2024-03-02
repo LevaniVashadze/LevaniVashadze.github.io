@@ -1,0 +1,20 @@
+{
+  "loading": "Lädt...",
+  "home": "Start",
+  "about": "Über mich",
+  "work": "Projekte",
+  "contact": "Kontakt",
+  "hello": "Hallo,",
+  "welcome": "Willkommen zu Levani's Webseite",
+  "scroll": "Scroll runter",
+  "aboutTitle": "Mein Name ist Levani und I ich bin ein Software Developer.",
+  "aboutText": "Ich bin Fullstack Developer und habe Erfahrung im Backend mit Django und Flask. Für die Database verwende ich normalerweise PostgreSQL oder MongoDB. Für das Frontend habe ich Erfahrung mit Next.js und React und für das Styling ist TailwindCSS mein Favorit. Ich habe auch Erfahrung mit Docker und der Arbeit mit der Cloud. Ich spreche fließend Deutsch, Englisch und Georgisch.",
+  "project1Description": "Gamefolio.me ist eine Plattform, auf der Gamer ihre Lieblingsspiele und alles, was damit zusammenhängt, teilen können, indem sie hochgradig anpassbare Vorlagen auf ihrer eigenen URL haben. Ich bin sowohl im Frontend als auch im Backend involviert und treffe viele architektonische Entscheidungen für die Website. <1>Klicken Sie auf mich</1>, um die Website anzusehen (noch nicht online). Die Website wird mit Next.js und Tailwind im Frontend und Django für das Backend(mit Postgres) erstellt. Es befindet sich noch in der Entwicklung.",
+  "project2Description": "Wir haben Good Morning Tech News oder kurz GMT erstellt, ich hab sowohl am Frontend als auch am Backend gearbeitet und bin für die Seite zuständig. Es liefert die neuesten technischen Nachrichten, zusammengefasst von KI, direkt in Ihren Inbox. <1>Klicken Sie auf mich</1>, um die GitHub-Seite des Projekts anzuzeigen, oder klicken Sie <2>hier</2>, um die Live-Website anzuzeigen. Die Website wurde mit Flask und Tailwind erstellt.",
+  "project3Description": "Ich erstelle eine Konzeptseite mit React und Django. Klicken Sie <1>hier</1>, um die GitHub-Seite des Projekts anzuzeigen. Derzeit ist ein Teil der Landingpage fertig und ein Teil des Editors, zusammen mit einem dunklen Theme und einer Lokalisierung. Es befindet sich noch in der Entwicklung.",
+  "ContactText": "Wenn Sie mich für ein Projekt oder etwas anderes kontaktieren möchten, senden Sie mir eine Nachricht oder eine E-Mail.",
+  "email": "Deine E-Mail",
+  "subject": "Betreff",
+  "message": "Nachricht",
+  "send": "Senden"
+}

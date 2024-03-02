@@ -1,7 +1,10 @@
 import { Link, scrollSpy } from "react-scroll";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import LanguageDropdown from "./LanguageDropdown.jsx";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     scrollSpy.update();
   }, []);
@@ -16,7 +19,7 @@ const Navbar = () => {
             className="flex-none cursor-pointer font-sans text-4xl font-bold uppercase sm:text-7xl dark:text-white"
             to="Home"
           >
-            L
+            {"L"}
           </Link>
           <div className="sm:hidden">
             <button
@@ -60,6 +63,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
         <div
           id="navbar-collapse-with-animation"
           className="hs-collapse hidden grow basis-full overflow-hidden transition-all duration-300 sm:block"
@@ -70,10 +74,10 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               activeClass="text-gray-500 dark:text-white"
-              className="cursor-pointer font-oswald text-lg font-medium hover:text-gray-400 sm:text-2xl 2xl:text-3xl dark:text-gray-400 dark:hover:text-gray-500"
+              className="2xl:!leading-11 cursor-pointer font-oswald text-lg font-medium hover:text-gray-400 sm:text-2xl lg:!leading-10 2xl:text-3xl dark:text-gray-400 dark:hover:text-gray-500"
               to="Home"
             >
-              Home
+              {t("home")}
             </Link>
             <Link
               spy={true}
@@ -83,7 +87,7 @@ const Navbar = () => {
               className="cursor-pointer font-oswald text-lg font-medium hover:text-gray-400 sm:text-2xl 2xl:text-3xl dark:text-gray-400 dark:hover:text-gray-500"
               to="About"
             >
-              About
+              {t("about")}
             </Link>
             <Link
               spy={true}
@@ -93,7 +97,7 @@ const Navbar = () => {
               className="cursor-pointer font-oswald text-lg font-medium hover:text-gray-400 sm:text-2xl 2xl:text-3xl dark:text-gray-400 dark:hover:text-gray-500"
               to="Work"
             >
-              Work
+              {t("work")}
             </Link>
             <Link
               spy={true}
@@ -103,8 +107,9 @@ const Navbar = () => {
               className="cursor-pointer font-oswald text-lg font-medium hover:text-gray-400 sm:text-2xl 2xl:text-3xl dark:text-gray-400 dark:hover:text-gray-500"
               to="Contact"
             >
-              Contact
+              {t("contact")}
             </Link>
+            <LanguageDropdown />
           </div>
         </div>
       </nav>

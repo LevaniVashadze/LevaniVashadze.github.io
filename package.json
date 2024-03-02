@@ -11,9 +11,14 @@
   },
   "dependencies": {
     "@preline/collapse": "^2.0.2",
+    "@preline/dropdown": "^2.0.2",
+    "i18next": "^23.10.0",
+    "i18next-browser-languagedetector": "^7.2.0",
     "preline": "^2.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^14.0.5",
+    "react-icons": "^5.0.1",
     "react-scroll": "^1.9.0"
   },
   "devDependencies": {
