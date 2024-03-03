@@ -7,6 +7,7 @@ import ProgressBar from "./components/ProgressBar.jsx";
 import { Suspense, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer.jsx";
+import "preline/preline";
 
 function App() {
   const { t } = useTranslation();
