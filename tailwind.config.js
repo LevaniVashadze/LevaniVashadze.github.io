@@ -6,6 +6,7 @@ export default {
     "node_modules/preline/dist/*.js",
   ],
   theme: {
+    darkMode: "selector",
     extend: {
       fontFamily: {
         oswald: ["Oswald", "Noto Sans Georgian", "sans-serif"],

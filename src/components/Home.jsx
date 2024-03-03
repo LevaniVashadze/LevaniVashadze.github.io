@@ -8,7 +8,6 @@ const Home = () => {
       <section id="Home" className="flex h-screen items-center justify-center">
         <div className="text-center">
           <h1 className="font-sparta text-6xl font-bold">{t("hello")}</h1>
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <h3 className="text-3xl">{t("welcome")}</h3>
         </div>
 
