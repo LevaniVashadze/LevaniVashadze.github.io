@@ -7,7 +7,7 @@ const Contact = () => {
     <Element name={"Contact"}>
       <section
         id="Contact"
-        className="flex h-screen items-center justify-center"
+        className="flex min-h-screen min-h-svh items-center justify-center"
       >
         <div className="px-4 lg:w-1/2 2xl:w-1/3">
           <h3 className="mb-4 text-3xl">{t("ContactText")}</h3>

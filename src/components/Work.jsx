@@ -4,7 +4,10 @@ import { Trans } from "react-i18next";
 const Work = () => {
   return (
     <Element name={"Work"}>
-      <section id="Work" className="flex h-screen items-center justify-center">
+      <section
+        id="Work"
+        className="flex min-h-screen min-h-svh items-center justify-center"
+      >
         <div className="container mx-auto px-4 lg:w-2/3">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="">

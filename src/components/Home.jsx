@@ -5,9 +5,14 @@ const Home = () => {
   const { t } = useTranslation();
   return (
     <Element name={"Home"}>
-      <section id="Home" className="flex h-screen items-center justify-center">
+      <section
+        id="Home"
+        className="flex min-h-screen min-h-svh items-center justify-center"
+      >
         <div className="text-center">
-          <h1 className="font-sparta text-6xl font-bold">{t("hello")}</h1>
+          <h1 className="font-sparta text-5xl font-bold sm:text-6xl">
+            {t("hello")}
+          </h1>
           <h3 className="text-3xl">{t("welcome")}</h3>
         </div>
 
