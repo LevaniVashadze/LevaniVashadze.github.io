@@ -7,7 +7,7 @@ const Home = () => {
     <Element name={"Home"}>
       <section
         id="Home"
-        className="flex min-h-screen min-h-svh items-center justify-center"
+        className="flex !min-h-svh min-h-screen items-center justify-center"
       >
         <div className="text-center">
           <h1 className="font-sparta text-5xl font-bold sm:text-6xl">

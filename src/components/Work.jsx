@@ -6,7 +6,7 @@ const Work = () => {
     <Element name={"Work"}>
       <section
         id="Work"
-        className="flex min-h-screen min-h-svh items-center justify-center"
+        className="flex !min-h-svh min-h-screen items-center justify-center"
       >
         <div className="container mx-auto px-4 lg:w-2/3">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
