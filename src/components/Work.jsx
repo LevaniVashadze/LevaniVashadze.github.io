@@ -9,7 +9,7 @@ const Work = () => {
         className="flex !min-h-svh min-h-screen items-center justify-center"
       >
         <div className="container mx-auto px-4 lg:w-2/3">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-8">
             <div className="">
               <a target="_blank" rel="noreferrer" href="https://gamefolio.me/">
                 <img
@@ -33,6 +33,7 @@ const Work = () => {
                 }}
               />
             </div>
+            <hr className="border-1 my-14 border-gray-600 lg:hidden" />
 
             <div className="">
               <a
@@ -69,6 +70,7 @@ const Work = () => {
                 }}
               />
             </div>
+            <hr className="border-1 my-14 border-gray-600 lg:hidden" />
 
             <div className="">
               <img

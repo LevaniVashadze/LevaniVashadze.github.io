@@ -9,7 +9,7 @@ const About = () => {
         id="About"
         className="flex !min-h-svh min-h-screen items-center justify-center"
       >
-        <div className="mb-24 px-2 text-left lg:mb-0 lg:w-1/2 2xl:w-1/3">
+        <div className="mb-24 px-4 text-left lg:mb-0 lg:w-1/2 2xl:w-1/3">
           <h2 className="mb-1 text-4xl font-bold">{t("aboutTitle")}</h2>
           <p className="font-raleway text-2xl">{t("aboutText")}</p>
         </div>
