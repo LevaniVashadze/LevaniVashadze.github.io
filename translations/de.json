@@ -7,7 +7,7 @@
   "hello": "Hallo,",
   "welcome": "Willkommen zu Levani's Webseite",
   "scroll": "Scroll runter",
-  "aboutTitle": "Mein Name ist Levani und I ich bin ein Software Developer.",
+  "aboutTitle": "Mein Name ist Levani und ich bin ein Software Developer.",
   "aboutText": "Ich bin ein Fullstack Developer und habe Erfahrung im Backend mit Django und Flask. Für die Database verwende ich normalerweise PostgreSQL oder MongoDB. Für das Frontend habe ich Erfahrung mit Next.js und React und für das Styling ist TailwindCSS mein Favorit. Ich habe auch Erfahrung mit Docker und der Arbeit mit der Cloud. Ich spreche fließend Deutsch, Englisch und Georgisch.",
   "project1Description": "Gamefolio.me ist eine Plattform, auf der Gamer ihre Lieblingsspiele und alles, was damit zusammenhängt, teilen können, indem sie hochgradig anpassbare Vorlagen auf ihrer eigenen URL haben. Ich bin sowohl im Frontend als auch im Backend involviert und treffe viele architektonische Entscheidungen für die Website. <1>Klicken Sie auf mich</1>, um die Website anzusehen (noch nicht online). Die Website wird mit Next.js und Tailwind im Frontend und Django für das Backend(mit Postgres) erstellt. Es befindet sich noch in der Entwicklung.",
   "project2Description": "Wir haben Good Morning Tech News oder kurz GMT erstellt, ich hab sowohl am Frontend als auch am Backend gearbeitet und bin für die Seite zuständig. Es liefert die neuesten technischen Nachrichten, zusammengefasst von KI, direkt in Ihren Inbox. <1>Klicken Sie auf mich</1>, um die GitHub-Seite des Projekts anzuzeigen, oder klicken Sie <2>hier</2>, um die Live-Website anzuzeigen. Die Website wurde mit Flask und Tailwind erstellt.",
