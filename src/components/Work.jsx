@@ -80,7 +80,7 @@ const Work = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.youtube.com/shorts/Kvz3aZ0iqew"
+            href="https://www.youtube.com/shorts/QklJzGrvsvU"
             className="text-blue-600 underline"
           />
         ),
@@ -98,7 +98,7 @@ const Work = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.youtube.com/shorts/4nJ5qSIXFlI"
+            href="https://www.youtube.com/shorts/_vRGCAJmMZw"
             className="text-blue-600 underline"
           />
         ),
