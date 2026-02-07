@@ -1,262 +1,185 @@
 import { Element } from "react-scroll";
-import { Trans } from "react-i18next";
-import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useRef } from "react";
 
 const Work = () => {
-  const [currentProject, setCurrentProject] = useState(0);
+  const { t } = useTranslation();
+  const sectionRef = useRef(null);
 
   const projects = [
     {
       id: 1,
+      title: "Good Morning Tech",
       image: "/gmt.png",
       alt: "Good Morning Tech",
       link: "https://goodmorningtech.news/",
+      githubLink: "https://github.com/goodmornintech/goodmorningtech",
       i18nKey: "project1Description",
-      components: {
-        1: (
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/goodmornintech/goodmorningtech"
-            className="text-blue-600 underline"
-          />
-        ),
-        2: (
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://goodmorningtech.news/"
-            className="text-blue-600 underline"
-          />
-        ),
-      },
-      hoverRotate: "hover:-rotate-1",
+      tags: ["Flask", "MongoDB", "Email Automation", "AI"],
     },
     {
       id: 2,
+      title: "Gamefolio",
       image: "/gamefolio.png",
       alt: "Gamefolio",
       link: "https://gamefolio.me/",
       i18nKey: "project2Description",
-      components: {
-        1: (
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://gamefolio.me/"
-            className="text-blue-600 underline"
-          />
-        ),
-      },
-      hoverRotate: "hover:rotate-1",
+      tags: ["Next.js", "Django", "PostgreSQL", "TailwindCSS"],
     },
     {
       id: 3,
+      title: "ViralBuilder Platform",
       image: "/shopviral.png",
-      alt: "ShopViral",
-      link: "https://creatorsyndicate.app/",
+      alt: "ViralBuilder",
+      link: "https://viralbuilder.io/",
       i18nKey: "project3Description",
-      components: {
-        1: (
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://creatorsyndicate.app/"
-            className="text-blue-600 underline"
-          />
-        ),
-      },
-      hoverRotate: "hover:-rotate-1",
+      tags: [
+        "Next.js",
+        "PostgreSQL",
+        "FastAPI",
+        "Playwright",
+        "Redis",
+        "Docker",
+        "OAuth",
+        "Celery",
+      ],
     },
-
     {
       id: 4,
+      title: "Pravus Video Tool",
       image: "/pravus.png",
       alt: "Pravus",
       link: "",
+      exampleLink: "https://www.youtube.com/shorts/QklJzGrvsvU",
       i18nKey: "project4Description",
-      components: {
-        1: (
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.youtube.com/shorts/QklJzGrvsvU"
-            className="text-blue-600 underline"
-          />
-        ),
-      },
-      hoverRotate: "hover:-rotate-1",
+      tags: ["FFmpeg", "Pillow", "ElevenLabs", "Automation"],
     },
     {
       id: 5,
+      title: "Chat Video Generator",
       image: "/chat.png",
       alt: "Chat",
       link: "",
+      exampleLink: "https://www.youtube.com/shorts/_vRGCAJmMZw",
       i18nKey: "project5Description",
-      components: {
-        1: (
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.youtube.com/shorts/_vRGCAJmMZw"
-            className="text-blue-600 underline"
-          />
-        ),
-      },
-      hoverRotate: "hover:-rotate-1",
+      tags: ["FFmpeg", "Pillow", "AI Voice", "Video Editing"],
     },
   ];
-
-  const nextProject = () => {
-    setCurrentProject((prev) => (prev + 1) % projects.length);
-  };
-
-  const prevProject = () => {
-    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
-  };
 
   return (
     <Element name={"Work"}>
       <section
+        ref={sectionRef}
         id="Work"
-        className="flex min-h-screen items-center justify-center"
+        className="min-h-screen bg-white px-6 py-20"
       >
-        <div className="container mx-auto px-4 lg:w-2/3">
-          {/* Desktop Layout */}
-          <div className="hidden lg:block">
-            <div className="space-y-8">
-              {projects.map((project) => (
-                <div key={project.id} className="grid grid-cols-2 gap-8">
-                  {/* Image */}
-                  <div>
-                    {project.link ? (
-                      <a target="_blank" rel="noreferrer" href={project.link}>
-                        <img
-                          src={project.image}
-                          className={`w-full border border-black transition-all duration-200 ${project.hoverRotate} hover:opacity-90 hover:shadow-lg`}
-                          alt={project.alt}
-                        />
-                      </a>
-                    ) : (
-                      <img
-                        src={project.image}
-                        className={`w-full border border-black transition-all duration-200 ${project.hoverRotate} hover:opacity-90 hover:shadow-lg`}
-                        alt={project.alt}
-                      />
-                    )}
-                  </div>
-
-                  {/* Text */}
-                  <div>
-                    <Trans
-                      i18nKey={project.i18nKey}
-                      components={project.components}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Section Header */}
+        <div className="mx-auto mb-20 max-w-6xl">
+          <div className="mb-12 flex items-center gap-4">
+            <span className="font-body text-xs uppercase tracking-[0.2em] text-gray-400">
+              02
+            </span>
+            <div className="h-px flex-1 bg-gray-200"></div>
+            <span className="font-body text-xs uppercase tracking-[0.2em] text-gray-400">
+              {t("work")}
+            </span>
           </div>
+        </div>
 
-          {/* Mobile Layout - Custom Carousel */}
-          <div className="lg:hidden">
-            <div className="relative mx-auto max-w-md">
-              {/* Project Display */}
-              <div className="overflow-hidden rounded-lg">
+        <div className="mx-auto max-w-6xl space-y-32">
+          {/* Desktop & Mobile - Alternating Layout */}
+          {projects.map((project, index) => (
+            <div key={project.id} className="group">
+              <div className="grid items-start gap-12 md:grid-cols-2">
+                {/* Image */}
                 <div
-                  className="flex transition-transform duration-300 ease-in-out"
-                  style={{ transform: `translateX(-${currentProject * 100}%)` }}
+                  className={`${index % 2 === 1 ? "md:order-2" : "md:order-1"}`}
                 >
-                  {projects.map((project, index) => (
-                    <div key={project.id} className="w-full flex-shrink-0 px-4">
-                      <div className="flex flex-col space-y-4">
-                        {project.link ? (
-                          <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href={project.link}
-                          >
-                            <img
-                              src={project.image}
-                              className={`w-full border border-black transition-all duration-200 ${project.hoverRotate} hover:opacity-90 hover:shadow-lg`}
-                              alt={project.alt}
-                            />
-                          </a>
-                        ) : (
+                  <div className="space-y-3">
+                    <span className="font-body text-xs text-gray-400">
+                      [{String(index + 1).padStart(2, "0")}]
+                    </span>
+                    <div className="overflow-hidden border border-gray-200">
+                      {project.link ? (
+                        <a target="_blank" rel="noreferrer" href={project.link}>
                           <img
                             src={project.image}
-                            className={`w-full border border-black transition-all duration-200 ${project.hoverRotate} hover:opacity-90 hover:shadow-lg`}
+                            className="w-full transition-opacity duration-300 hover:opacity-80"
                             alt={project.alt}
                           />
-                        )}
-                        <div className="px-2">
-                          <Trans
-                            i18nKey={project.i18nKey}
-                            components={project.components}
-                          />
-                        </div>
-                      </div>
+                        </a>
+                      ) : (
+                        <img
+                          src={project.image}
+                          className="w-full"
+                          alt={project.alt}
+                        />
+                      )}
                     </div>
-                  ))}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div
+                  className={`space-y-6 ${index % 2 === 1 ? "md:order-1" : "md:order-2"}`}
+                >
+                  <h3 className="font-display text-2xl font-normal text-black md:text-3xl">
+                    {project.title}
+                  </h3>
+
+                  <p className="font-body text-sm leading-relaxed text-gray-600">
+                    {t(project.i18nKey)}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="border border-gray-200 px-2 py-1 font-body text-xs text-gray-500"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex flex-wrap gap-4 border-t border-gray-100 pt-2">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-body text-xs uppercase tracking-wider text-black transition-colors hover:text-gray-600"
+                      >
+                        View →
+                      </a>
+                    )}
+                    {project.githubLink && (
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
+                      >
+                        GitHub
+                      </a>
+                    )}
+                    {project.exampleLink && (
+                      <a
+                        href={project.exampleLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
+                      >
+                        Example
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-
-              {/* Navigation Buttons */}
-              <button
-                onClick={prevProject}
-                className="absolute left-0 top-1/2 -translate-x-4 -translate-y-1/2 rounded-full border border-gray-300 bg-white p-2 shadow-md transition-colors hover:bg-gray-50"
-                aria-label="Previous project"
-              >
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
-
-              <button
-                onClick={nextProject}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 rounded-full border border-gray-300 bg-white p-2 shadow-md transition-colors hover:bg-gray-50"
-                aria-label="Next project"
-              >
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-
-              {/* Dots Indicator */}
-              <div className="mt-6 flex justify-center space-x-2">
-                {projects.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentProject(index)}
-                    className={`h-3 w-3 rounded-full transition-colors ${
-                      index === currentProject ? "bg-gray-800" : "bg-gray-300"
-                    }`}
-                    aria-label={`Go to project ${index + 1}`}
-                  />
-                ))}
-              </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
     </Element>

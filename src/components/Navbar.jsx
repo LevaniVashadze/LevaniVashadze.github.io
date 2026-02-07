@@ -8,73 +8,120 @@ const Navbar = () => {
   useEffect(() => {
     scrollSpy.update();
   }, []);
+
   return (
-    <header className="fixed z-50 flex w-full flex-wrap bg-white py-4 text-sm sm:flex-nowrap sm:justify-start dark:bg-gray-800">
+    <header className="fixed z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-sm">
       <nav
-        className="mx-auto w-full max-w-[85rem] px-4 sm:flex sm:items-center sm:justify-between"
+        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
         aria-label="Global"
       >
-        <div className="flex items-center justify-between">
+        {/* Logo - Minimalistic */}
+        <Link
+          className="cursor-pointer font-display text-base font-medium tracking-tight text-black transition-colors hover:text-gray-600"
+          to="Home"
+          smooth={true}
+          duration={500}
+        >
+          LV
+        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden items-center gap-8 md:flex">
           <Link
-            className="flex-none cursor-pointer font-sans text-4xl font-bold uppercase sm:text-7xl dark:text-white"
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="text-black"
+            className="cursor-pointer font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
             to="Home"
           >
-            {"L"}
+            {t("home")}
           </Link>
-          <div className="sm:hidden">
-            <button
-              type="button"
-              className="hs-collapse-toggle inline-flex items-center justify-center gap-x-2 p-2 text-gray-800 hover:bg-gray-50 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:bg-transparent dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              data-hs-collapse="#navbar-collapse-with-animation"
-              aria-controls="navbar-collapse-with-animation"
-              aria-label="Toggle navigation"
-            >
-              <svg
-                className="size-4 flex-shrink-0 hs-collapse-open:hidden"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="3" x2="21" y1="6" y2="6" />
-                <line x1="3" x2="21" y1="12" y2="12" />
-                <line x1="3" x2="21" y1="18" y2="18" />
-              </svg>
-              <svg
-                className="hidden size-4 flex-shrink-0 hs-collapse-open:block"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 6 6 18" />
-                <path d="m6 6 12 12" />
-              </svg>
-            </button>
-          </div>
+          <Link
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="text-black"
+            className="cursor-pointer font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
+            to="About"
+          >
+            {t("about")}
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="text-black"
+            className="cursor-pointer font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
+            to="Work"
+          >
+            {t("work")}
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            duration={500}
+            activeClass="text-black"
+            className="cursor-pointer font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
+            to="Contact"
+          >
+            {t("contact")}
+          </Link>
+          <div className="h-4 w-px bg-gray-200"></div>
+          <LanguageDropdown />
         </div>
 
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            type="button"
+            className="hs-collapse-toggle inline-flex items-center justify-center p-2 text-gray-500 transition-colors hover:text-black"
+            data-hs-collapse="#navbar-collapse-with-animation"
+            aria-controls="navbar-collapse-with-animation"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              className="size-5 hs-collapse-open:hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              <line x1="3" x2="21" y1="6" y2="6" />
+              <line x1="3" x2="21" y1="12" y2="12" />
+              <line x1="3" x2="21" y1="18" y2="18" />
+            </svg>
+            <svg
+              className="hidden size-5 hs-collapse-open:block"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
         <div
           id="navbar-collapse-with-animation"
-          className="hs-collapse hidden grow basis-full overflow-hidden transition-all duration-300 sm:block"
+          className="hs-collapse absolute left-0 top-full hidden w-full border-b border-gray-100 bg-white md:hidden"
         >
-          <div className="mt-5 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:ps-5 ">
+          <div className="flex flex-col gap-1 px-6 py-4">
             <Link
               spy={true}
               smooth={true}
               duration={500}
-              activeClass="text-gray-500 dark:text-white"
-              className="2xl:!leading-11 cursor-pointer font-oswald text-lg font-medium hover:text-gray-400 sm:text-2xl lg:!leading-10 2xl:text-3xl dark:text-gray-400 dark:hover:text-gray-500"
+              activeClass="text-black"
+              className="cursor-pointer py-2 font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
               to="Home"
             >
               {t("home")}
@@ -83,8 +130,8 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              activeClass="text-gray-500 dark:text-white"
-              className="cursor-pointer font-oswald text-lg font-medium hover:text-gray-400 sm:text-2xl 2xl:text-3xl dark:text-gray-400 dark:hover:text-gray-500"
+              activeClass="text-black"
+              className="cursor-pointer py-2 font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
               to="About"
             >
               {t("about")}
@@ -93,8 +140,8 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              activeClass="text-gray-500 dark:text-white"
-              className="cursor-pointer font-oswald text-lg font-medium hover:text-gray-400 sm:text-2xl 2xl:text-3xl dark:text-gray-400 dark:hover:text-gray-500"
+              activeClass="text-black"
+              className="cursor-pointer py-2 font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
               to="Work"
             >
               {t("work")}
@@ -103,13 +150,15 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
-              activeClass="text-gray-500 dark:text-white"
-              className="cursor-pointer font-oswald text-lg font-medium hover:text-gray-400 sm:text-2xl 2xl:text-3xl dark:text-gray-400 dark:hover:text-gray-500"
+              activeClass="text-black"
+              className="cursor-pointer py-2 font-body text-xs uppercase tracking-wider text-gray-500 transition-colors hover:text-black"
               to="Contact"
             >
               {t("contact")}
             </Link>
-            <LanguageDropdown />
+            <div className="mt-2 border-t border-gray-100 pt-2">
+              <LanguageDropdown />
+            </div>
           </div>
         </div>
       </nav>

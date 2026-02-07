@@ -7,32 +7,34 @@ const Home = () => {
     <Element name={"Home"}>
       <section
         id="Home"
-        className="flex !min-h-svh min-h-screen items-center justify-center"
+        className="flex min-h-screen items-center justify-center bg-white"
       >
-        <div className="text-center">
-          <h1 className="font-sparta text-5xl font-bold sm:text-6xl">
-            {t("hello")}
-          </h1>
-          <h3 className="text-3xl">{t("welcome")}</h3>
+        <div className="max-w-4xl px-6">
+          <div className="space-y-8">
+            {/* Minimalistic greeting */}
+            <div className="border-l-2 border-black pl-6">
+              <h1 className="font-display text-5xl font-light tracking-tight text-black md:text-7xl">
+                {t("hello")}
+              </h1>
+            </div>
+
+            {/* Name/Title */}
+            <div className="pl-8">
+              <h2 className="font-body text-xl font-normal tracking-wide text-gray-700 md:text-2xl">
+                {t("welcome")}
+              </h2>
+            </div>
+          </div>
         </div>
 
-        {/*  reminder to scroll down  */}
-        <div className="absolute bottom-0 left-1/2 mb-10 -translate-x-1/2 transform">
-          <p className="text-center">{t("scroll")}</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="mx-auto h-5 w-5 motion-safe:animate-bounce"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
+        {/* Minimal scroll indicator */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
+          <div className="flex flex-col items-center gap-2">
+            <span className="font-body text-xs uppercase tracking-widest text-gray-400">
+              {t("scroll")}
+            </span>
+            <div className="h-8 w-px bg-gray-300 motion-safe:animate-pulse"></div>
+          </div>
         </div>
       </section>
     </Element>

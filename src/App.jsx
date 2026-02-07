@@ -16,7 +16,7 @@ function App() {
     window.HSStaticMethods.autoInit();
   }, []);
   return (
-    <div className="App scroll-smooth font-oswald">
+    <div className="App scroll-smooth bg-white font-body">
       <Suspense fallback={<div>{t("loading")}</div>}>
         <Navbar />
         <Home />
