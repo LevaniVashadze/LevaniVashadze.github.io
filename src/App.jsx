@@ -1,28 +1,32 @@
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import ProgressBar from "./components/ProgressBar.jsx";
 import { Suspense, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer.jsx";
-import "preline/preline";
 
 function App() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    window.HSStaticMethods.autoInit();
+    document.documentElement.classList.add("js");
+    return () => document.documentElement.classList.remove("js");
   }, []);
   return (
-    <div className="App scroll-smooth bg-white font-body">
-      <Suspense fallback={<div>{t("loading")}</div>}>
+    <div className="App">
+      <Suspense fallback={<div className="loading-screen">{t("loading")}</div>}>
         <Navbar />
-        <Home />
-        <About />
-        <Work />
-        <Contact />
+        <main>
+          <Home />
+          <About />
+          <Experience />
+          <Work />
+          <Contact />
+        </main>
         <ProgressBar />
         <Footer />
       </Suspense>

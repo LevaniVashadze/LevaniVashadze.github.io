@@ -1,55 +1,50 @@
 import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
+const skills = [
+  ["Data", "Oracle PL/SQL", "SQL", "PostgreSQL", "MongoDB"],
+  ["Backend", "Python", "Django", "Flask", "FastAPI"],
+  ["Product", "React", "Next.js", "Tailwind CSS", "Docker"],
+];
+
 const About = () => {
   const { t } = useTranslation();
+
   return (
-    <Element name={"About"}>
-      <section
-        id="About"
-        className="flex min-h-screen items-center justify-center bg-white py-20"
-      >
-        <div className="w-full max-w-4xl px-6">
-          <div className="space-y-12">
-            {/* Section label */}
-            <div className="flex items-center gap-4">
-              <span className="font-body text-xs uppercase tracking-[0.2em] text-gray-400">
-                01
-              </span>
-              <div className="h-px flex-1 bg-gray-200"></div>
-              <span className="font-body text-xs uppercase tracking-[0.2em] text-gray-400">
-                About
-              </span>
-            </div>
+    <Element name="About">
+      <section id="About" className="about-section section-shell">
+        <div className="section-rule reveal">
+          <span>01</span>
+          <span>{t("about")}</span>
+        </div>
 
-            {/* Content */}
-            <div className="space-y-6">
-              <h2 className="font-display text-3xl font-normal leading-relaxed text-black md:text-4xl">
-                {t("aboutTitle")}
-              </h2>
-              <p className="max-w-2xl font-body text-sm leading-loose text-gray-600 md:text-base">
-                {t("aboutText")}
-              </p>
-            </div>
-
-            {/* Skills - minimal grid */}
-            <div className="grid grid-cols-2 gap-4 border-t border-gray-100 pt-8 md:grid-cols-4">
-              {[
-                "Django",
-                "Flask",
-                "Next.js",
-                "React",
-                "TailwindCSS",
-                "Docker",
-                "MongoDB",
-                "PostgreSQL",
-              ].map((skill) => (
-                <div key={skill} className="font-body text-xs text-gray-500">
-                  {skill}
-                </div>
-              ))}
+        <div className="about-layout">
+          <div className="about-heading reveal">
+            <h2>{t("aboutTitle")}</h2>
+          </div>
+          <div className="about-copy reveal">
+            <p>{t("aboutText")}</p>
+            <div className="language-line">
+              <span>{t("languagesLabel")}</span>
+              <strong>{t("languages")}</strong>
             </div>
           </div>
+        </div>
+
+        <div className="skills-grid reveal">
+          {skills.map(([label, ...items], index) => (
+            <div className="skill-column" key={label}>
+              <div className="skill-heading">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{label}</h3>
+              </div>
+              <ul>
+                {items.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
     </Element>

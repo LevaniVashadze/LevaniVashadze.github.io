@@ -5,92 +5,66 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <Element name={"Contact"}>
-      <section id="Contact" className="min-h-screen bg-white px-6 py-20">
-        <div className="mx-auto max-w-4xl">
-          {/* Section Header */}
-          <div className="mb-20 flex items-center gap-4">
-            <span className="font-body text-xs uppercase tracking-[0.2em] text-gray-400">
-              03
-            </span>
-            <div className="h-px flex-1 bg-gray-200"></div>
-            <span className="font-body text-xs uppercase tracking-[0.2em] text-gray-400">
-              {t("contact")}
-            </span>
-          </div>
-
-          {/* Content */}
-          <div className="max-w-2xl">
-            <p className="mb-12 font-body text-sm leading-relaxed text-gray-600">
-              {t("ContactText")}
-            </p>
-
-            {/* Form */}
-            <form
-              method="post"
-              action="https://formspree.io/f/xoqrgvkg"
-              className="space-y-6"
-            >
-              <div className="space-y-2">
-                <label
-                  htmlFor="email"
-                  className="font-body text-xs uppercase tracking-wider text-gray-500"
-                >
-                  {t("email")}
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  className="w-full border border-gray-200 bg-white px-4 py-3 font-body text-sm text-black transition-colors focus:border-black focus:outline-none"
-                  placeholder="your@email.com"
-                  name="email"
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label
-                  htmlFor="subject"
-                  className="font-body text-xs uppercase tracking-wider text-gray-500"
-                >
-                  {t("subject")}
-                </label>
-                <input
-                  id="subject"
-                  type="text"
-                  className="w-full border border-gray-200 bg-white px-4 py-3 font-body text-sm text-black transition-colors focus:border-black focus:outline-none"
-                  placeholder="Project inquiry..."
-                  name="subject"
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label
-                  htmlFor="message"
-                  className="font-body text-xs uppercase tracking-wider text-gray-500"
-                >
-                  {t("message")}
-                </label>
-                <textarea
-                  id="message"
-                  rows="6"
-                  className="w-full resize-none border border-gray-200 bg-white px-4 py-3 font-body text-sm text-black transition-colors focus:border-black focus:outline-none"
-                  placeholder="Tell me about your project..."
-                  name="text"
-                  required
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="border border-black bg-black px-8 py-3 font-body text-xs uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-black"
-              >
-                {t("send")}
-              </button>
-            </form>
-          </div>
+    <Element name="Contact">
+      <section id="Contact" className="contact-section section-shell">
+        <div className="section-rule dark-rule reveal">
+          <span>04</span>
+          <span>{t("contact")}</span>
         </div>
+
+        <div className="contact-intro reveal">
+          <p className="eyebrow">{t("haveProject")}</p>
+          <h2>
+            {t("contactTitleOne")}
+            <span>{t("contactTitleTwo")}</span>
+          </h2>
+          <a className="email-link" href="mailto:vashadzelevani11@gmail.com">
+            vashadzelevani11@gmail.com
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>
+          </a>
+        </div>
+
+        <form
+          method="post"
+          action="https://formspree.io/f/xoqrgvkg"
+          className="contact-form reveal"
+        >
+          <label>
+            <span>01 / {t("email")}</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@company.com"
+              required
+            />
+          </label>
+          <label>
+            <span>02 / {t("subject")}</span>
+            <input
+              type="text"
+              name="subject"
+              placeholder={t("subjectPlaceholder")}
+              required
+            />
+          </label>
+          <label className="message-field">
+            <span>03 / {t("message")}</span>
+            <textarea
+              rows="4"
+              name="text"
+              placeholder={t("messagePlaceholder")}
+              required
+            />
+          </label>
+          <button type="submit">
+            {t("send")}
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-5-5 5 5-5 5" />
+            </svg>
+          </button>
+        </form>
       </section>
     </Element>
   );

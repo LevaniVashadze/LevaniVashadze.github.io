@@ -1,18 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const ProgressBar = () => {
+  const [progress, setProgress] = useState(0);
+
   useEffect(() => {
-    window.onscroll = () => {
-      const progressBar = document.querySelector(".progress-bar__fill");
-      const totalHeight = document.body.scrollHeight - window.innerHeight;
-      const progress = (window.pageYOffset / totalHeight) * 100;
-      progressBar.style.width = `${progress}%`;
+    const update = () => {
+      const height = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(height > 0 ? (window.scrollY / height) * 100 : 0);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
     };
   }, []);
 
   return (
-    <div className="progress-bar fixed bottom-0 h-1.5 w-full">
-      <div className="progress-bar__fill h-1.5 bg-black"></div>
+    <div className="progress-track" aria-hidden="true">
+      <div style={{ width: `${progress}%` }} />
     </div>
   );
 };
