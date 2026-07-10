@@ -88,7 +88,15 @@ const Work = () => {
                 <div className="project-meta">
                   <span>{project.type}</span>
                 </div>
-                <h3>{project.title}</h3>
+                <h3
+                  className={
+                    project.title === "ViralBuilder"
+                      ? "project-title--long"
+                      : undefined
+                  }
+                >
+                  {project.title}
+                </h3>
                 <p>{t(project.description)}</p>
                 <div className="project-tags" aria-label="Technologies used">
                   {project.tags.map((tag) => (
