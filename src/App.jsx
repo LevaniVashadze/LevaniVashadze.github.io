@@ -10,12 +10,18 @@ import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer.jsx";
 
 function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     document.documentElement.classList.add("js");
     return () => document.documentElement.classList.remove("js");
   }, []);
+
+  useEffect(() => {
+    const language = (i18n.resolvedLanguage || "en").split("-")[0];
+    document.documentElement.lang = language;
+  }, [i18n.resolvedLanguage]);
+
   return (
     <div className="App">
       <Suspense fallback={<div className="loading-screen">{t("loading")}</div>}>

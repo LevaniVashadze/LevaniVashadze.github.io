@@ -8,8 +8,15 @@ const navItems = ["About", "Experience", "Work", "Contact"];
 const Navbar = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const [logoClicks, setLogoClicks] = useState(0);
 
   const closeMenu = () => setOpen(false);
+  const handleWordmarkClick = () => {
+    closeMenu();
+    setLogoClicks((clicks) => Math.min(clicks + 1, 7));
+  };
+  const showEasterEgg = logoClicks >= 6;
+  const completeEasterEgg = logoClicks >= 7;
 
   return (
     <header className="site-header">
@@ -18,11 +25,21 @@ const Navbar = () => {
           to="Home"
           smooth
           duration={650}
-          className="wordmark"
-          onClick={closeMenu}
+          className={`wordmark${showEasterEgg ? " wordmark--easter-egg" : ""}${completeEasterEgg ? " wordmark--easter-egg--complete" : ""}`}
+          onClick={handleWordmarkClick}
+          aria-label={showEasterEgg ? `Easter egg ${completeEasterEgg ? "67" : "6"}` : "Levani Vashadze"}
         >
-          <span>LEVANI</span>
-          <span>VASHADZE</span>
+          {showEasterEgg ? (
+            <>
+              <span>6</span>
+              {completeEasterEgg && <span>7</span>}
+            </>
+          ) : (
+            <>
+              <span>LEVANI</span>
+              <span>VASHADZE</span>
+            </>
+          )}
         </Link>
 
         <div className={`nav-links ${open ? "is-open" : ""}`}>
