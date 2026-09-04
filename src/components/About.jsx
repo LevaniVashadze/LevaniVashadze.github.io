@@ -19,9 +19,6 @@ const About = () => {
         </div>
 
         <div className="about-layout">
-          <div className="about-heading reveal">
-            <h2>{t("aboutTitle")}</h2>
-          </div>
           <div className="about-copy reveal">
             <p>{t("aboutText")}</p>
             <div className="language-line">

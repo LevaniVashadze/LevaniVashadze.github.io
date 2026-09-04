@@ -44,7 +44,6 @@ html[lang="ka"] body {
 
 html[lang="ka"] :is(
   .wordmark,
-  .about-heading h2,
   .work-intro h2,
   .skill-heading h3,
   .experience-copy h2,
@@ -73,7 +72,6 @@ html[lang="ka"] :is(
 }
 
 html[lang="ka"] :is(
-  .about-heading h2,
   .work-intro h2,
   .experience-copy h2,
   .contact-intro h2
@@ -465,48 +463,48 @@ svg {
 
 .about-layout {
   display: grid;
-  padding: clamp(54px, 6vw, 88px) 0 clamp(58px, 6.5vw, 94px);
-  gap: 6vw;
-  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+  max-width: 980px;
+  padding: clamp(44px, 5vw, 72px) 0 clamp(48px, 5.5vw, 80px);
 }
 
-.about-heading h2,
 .work-intro h2 {
   max-width: 960px;
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(2.8rem, 6.4vw, 7.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.055em;
+  font-size: clamp(2.2rem, 4.5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
   text-transform: uppercase;
 }
 
 .about-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: grid;
+  align-items: end;
+  gap: clamp(36px, 6vw, 88px);
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 0.34fr);
 }
 
 .about-copy > p {
   margin: 0;
   color: #3f403a;
-  font-size: clamp(13px, 1.05vw, 16px);
-  line-height: 1.85;
+  font-size: clamp(17px, 1.55vw, 23px);
+  line-height: 1.65;
 }
 
 .language-line {
   display: grid;
-  margin-top: 42px;
+  margin: 0;
   padding-top: 18px;
+  border-top: 1px solid var(--line);
   gap: 20px;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .language-line span { color: var(--muted); }
-.language-line strong { font-weight: 500; text-align: right; }
+.language-line strong { font-weight: 500; line-height: 1.6; }
 
 .skills-grid {
   display: grid;
@@ -614,9 +612,9 @@ svg {
   max-width: 850px;
   margin: 12px 0 16px;
   font-family: var(--display);
-  font-size: clamp(2rem, 3.5vw, 4.2rem);
-  line-height: 0.96;
-  letter-spacing: -0.05em;
+  font-size: clamp(1.8rem, 2.8vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
@@ -802,14 +800,14 @@ svg {
   max-width: 100%;
   margin: 18px 0 22px;
   font-family: var(--display);
-  font-size: clamp(2.4rem, 4.5vw, 6rem);
-  line-height: 0.9;
-  letter-spacing: -0.055em;
+  font-size: clamp(2rem, 3.25vw, 4rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
   text-transform: uppercase;
 }
 
 .project-details h3.project-title--long {
-  font-size: clamp(2.1rem, 3.3vw, 4.5rem);
+  font-size: clamp(1.9rem, 2.8vw, 3.4rem);
 }
 
 .project-details > p {
@@ -865,9 +863,9 @@ svg {
   max-width: 1150px;
   margin: 28px 0 48px;
   font-family: var(--display);
-  font-size: clamp(3.6rem, 9vw, 11rem);
-  line-height: 0.78;
-  letter-spacing: -0.07em;
+  font-size: clamp(3rem, 6.5vw, 7.5rem);
+  line-height: 0.84;
+  letter-spacing: -0.055em;
   text-transform: uppercase;
 }
 
@@ -1066,7 +1064,7 @@ svg {
   .project,
   .project:nth-child(even),
   .work-intro { grid-template-columns: 1fr; }
-  .about-layout { gap: 40px; }
+  .about-copy { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .skill-column { min-height: 0; }
   .skill-column ul { margin-top: 32px; }
@@ -1082,7 +1080,7 @@ svg {
     padding: 4px 0 4px 24px;
     box-shadow: inset 2px 0 rgba(162, 42, 35, 0.3);
   }
-  .project-details h3.project-title--long { font-size: 9.3vw; }
+  .project-details h3.project-title--long { font-size: 7.6vw; }
 }
 
 @media (max-width: 560px) {
@@ -1091,18 +1089,17 @@ svg {
   .hero-bottom { grid-template-columns: 1fr; }
   .hero-bottom > p { max-width: 310px; }
   .round-link { width: 82px; height: 82px; margin-left: auto; }
-  .about-heading h2,
   .work-intro h2,
-  .experience-copy h2 { font-size: 9.5vw; }
+  .experience-copy h2 { font-size: 8vw; }
   .about-layout { padding-top: 46px; }
-  .language-line { grid-template-columns: 1fr; gap: 8px; }
-  .language-line strong { text-align: left; }
+  .about-copy > p { font-size: 16px; }
+  .language-line { gap: 8px; }
   .experience-brand { align-items: center; }
   .experience-status { align-self: flex-start; }
   .responsibility-list li { grid-template-columns: 25px 1fr; gap: 10px; }
-  .project-details h3 { font-size: 10.5vw; }
-  .contact-intro h2 { font-size: 17vw; }
-  html[lang="de"] .contact-intro h2 { font-size: 13.7vw; }
+  .project-details h3 { font-size: 8.6vw; }
+  .contact-intro h2 { font-size: 12.5vw; }
+  html[lang="de"] .contact-intro h2 { font-size: 10.8vw; }
   .contact-intro h2 span { -webkit-text-stroke-width: 1px; }
   .email-link { max-width: 100%; font-size: 11px; }
   .contact-form { grid-template-columns: 1fr; }
