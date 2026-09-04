@@ -16,11 +16,6 @@ const Experience = () => {
   return (
     <Element name="Experience">
       <section id="Experience" className="experience-section section-shell">
-        <div className="section-rule reveal">
-          <span>02</span>
-          <span>{t("experience")}</span>
-        </div>
-
         <div className="experience-layout">
           <div className="experience-brand reveal">
             <div className="silk-mark">

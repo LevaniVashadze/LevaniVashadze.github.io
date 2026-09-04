@@ -45,7 +45,6 @@ html[lang="ka"] body {
 html[lang="ka"] :is(
   .wordmark,
   .work-intro h2,
-  .skill-heading h3,
   .experience-copy h2,
   .project-details h3,
   .contact-intro h2,
@@ -58,9 +57,7 @@ html[lang="ka"] :is(
 html[lang="ka"] :is(
   .nav-links > a,
   .hero-kicker,
-  .section-rule,
   .eyebrow,
-  .language-line,
   .experience-status,
   .project-meta,
   .text-link,
@@ -434,21 +431,6 @@ svg {
   padding: clamp(64px, 6.5vw, 96px) 3vw;
 }
 
-.section-rule {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--muted);
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.section-rule span:first-child {
-  color: var(--acid);
-  font-weight: 500;
-}
-
 .eyebrow {
   margin: 0;
   color: var(--muted);
@@ -478,10 +460,7 @@ svg {
 }
 
 .about-copy {
-  display: grid;
-  align-items: end;
-  gap: clamp(36px, 6vw, 88px);
-  grid-template-columns: minmax(0, 1fr) minmax(210px, 0.34fr);
+  max-width: 920px;
 }
 
 .about-copy > p {
@@ -491,62 +470,22 @@ svg {
   line-height: 1.65;
 }
 
-.language-line {
-  display: grid;
-  margin: 0;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-  gap: 20px;
-  grid-template-columns: 1fr;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.language-line span { color: var(--muted); }
-.language-line strong { font-weight: 500; line-height: 1.6; }
-
-.skills-grid {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.skill-column {
-  min-height: 230px;
-  padding: 24px;
-  background: rgba(17, 18, 14, 0.045);
-}
-
-.skill-heading {
+.skills-list {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.skill-heading span {
-  color: var(--orange);
-  font-size: 10px;
-}
-
-.skill-heading h3 {
   margin: 0;
-  font-family: var(--display);
-  font-size: clamp(1.3rem, 2vw, 2.2rem);
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-}
-
-.skill-column ul {
-  margin: 46px 0 0;
-  padding: 0;
+  padding: clamp(20px, 2.5vw, 32px);
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: rgba(17, 18, 14, 0.035);
   list-style: none;
 }
 
-.skill-column li {
-  padding: 7px 0;
-  color: var(--muted);
-  font-size: 11px;
+.skills-list li {
+  padding: 9px 13px;
+  background: rgba(17, 18, 14, 0.065);
+  color: #484943;
+  font-size: 10px;
 }
 
 .experience-section {
@@ -848,11 +787,6 @@ svg {
   color: var(--paper);
 }
 
-.dark-rule {
-  border-color: rgba(233, 231, 221, 0.22);
-  color: rgba(233, 231, 221, 0.46);
-}
-
 .contact-intro {
   padding: clamp(58px, 6vw, 92px) 0 clamp(48px, 5vw, 72px);
 }
@@ -942,15 +876,15 @@ svg {
   background: var(--acid);
   color: var(--ink);
   font-family: var(--display);
-  font-size: clamp(1.5rem, 3vw, 3.2rem);
-  letter-spacing: -0.04em;
+  font-size: clamp(1rem, 1.35vw, 1.35rem);
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   transition: background 200ms ease;
   grid-column: 1 / -1;
 }
 
 .contact-form button:hover { background: var(--orange); }
-.contact-form button svg { width: 32px; }
+.contact-form button svg { width: 21px; }
 
 .site-footer {
   display: grid;
@@ -1064,10 +998,6 @@ svg {
   .project,
   .project:nth-child(even),
   .work-intro { grid-template-columns: 1fr; }
-  .about-copy { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: 1fr; }
-  .skill-column { min-height: 0; }
-  .skill-column ul { margin-top: 32px; }
   .experience-layout { gap: 30px; }
   .silk-mark { width: min(54vw, 205px); }
   .work-intro { row-gap: 28px; }
@@ -1093,7 +1023,6 @@ svg {
   .experience-copy h2 { font-size: 8vw; }
   .about-layout { padding-top: 46px; }
   .about-copy > p { font-size: 16px; }
-  .language-line { gap: 8px; }
   .experience-brand { align-items: center; }
   .experience-status { align-self: flex-start; }
   .responsibility-list li { grid-template-columns: 25px 1fr; gap: 10px; }

@@ -57,11 +57,6 @@ const Work = () => {
   return (
     <Element name="Work">
       <section id="Work" className="work-section section-shell">
-        <div className="section-rule reveal">
-          <span>03</span>
-          <span>{t("freelance")}</span>
-        </div>
-
         <div className="work-intro reveal">
           <h2>{t("workTitle")}</h2>
           <p>{t("workIntro")}</p>

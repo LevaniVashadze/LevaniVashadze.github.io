@@ -7,11 +7,6 @@ const Contact = () => {
   return (
     <Element name="Contact">
       <section id="Contact" className="contact-section section-shell">
-        <div className="section-rule dark-rule reveal">
-          <span>04</span>
-          <span>{t("contact")}</span>
-        </div>
-
         <div className="contact-intro reveal">
           <p className="eyebrow">{t("haveProject")}</p>
           <h2>
