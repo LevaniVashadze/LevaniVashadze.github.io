@@ -1,33 +1,51 @@
 import { Element, Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
+import { focusSection, scrollProps } from "../motion";
+
+const areas = ["web", "data", "automation"];
 
 const Home = () => {
   const { t } = useTranslation();
 
   return (
     <Element name="Home">
-      <section id="Home" className="hero">
-        <div className="hero-grid" aria-hidden="true" />
-
-        <div className="hero-title">
-          <p className="hero-kicker hero-reveal hero-delay-1">
-            {t("heroKicker")}
-          </p>
-          <h1 aria-label="Levani Vashadze">
-            <span className="hero-reveal hero-delay-2">LEVANI</span>
-            <span className="outline-text hero-reveal hero-delay-3">VASHADZE</span>
-          </h1>
+      <section id="Home" className="hero shell">
+        <div className="hero-intro">
+          <h1>Levani Vashadze</h1>
+          <p className="hero-role">{t("role")}</p>
+          <div className="hero-actions">
+            <Link
+              to="Work"
+              href="#Work"
+              {...scrollProps}
+              onClick={() => focusSection("Work")}
+              className="button button--primary"
+            >
+              {t("viewProjects")}
+            </Link>
+            <Link
+              to="Contact"
+              href="#Contact"
+              {...scrollProps}
+              onClick={() => focusSection("Contact")}
+              className="button button--secondary"
+            >
+              {t("getInTouch")}
+            </Link>
+          </div>
         </div>
 
-        <div className="hero-bottom hero-reveal hero-delay-4">
-          <p>{t("heroStatement")}</p>
-          <Link to="Work" smooth duration={650} className="round-link">
-            <span>{t("exploreWork")}</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 4v16m0 0 6-6m-6 6-6-6" />
-            </svg>
-          </Link>
-        </div>
+        <aside className="hero-card glass" aria-labelledby="hero-card-title">
+          <h2 id="hero-card-title">{t("workOn")}</h2>
+          <ul className="hero-areas">
+            {areas.map((area) => (
+              <li key={area}>
+                <strong>{t(`area.${area}.title`)}</strong>
+                <span>{t(`area.${area}.text`)}</span>
+              </li>
+            ))}
+          </ul>
+        </aside>
       </section>
     </Element>
   );

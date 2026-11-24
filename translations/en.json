@@ -1,42 +1,72 @@
 {
   "loading": "Loading...",
-  "home": "Home",
   "about": "About",
   "experience": "Experience",
-  "work": "Work",
-  "freelance": "Freelance work",
+  "work": "Projects",
   "contact": "Contact",
-  "heroKicker": "PL/SQL Developer / Full-stack Developer",
-  "heroStatement": "I build data-intensive reporting systems with Oracle PL/SQL and ship full-stack products with Python and React.",
-  "exploreWork": "View projects",
-  "aboutText": "I work at Silk Bank as a Junior PL/SQL Developer and Reporting Specialist. My day-to-day work involves Oracle SQL, PL/SQL, banking reports, and data validation. Outside the bank, I build and maintain web applications and automation tools with Python, FastAPI, Django, React, and Next.js. I also have experience deploying applications to the cloud, including AWS, managing Docker environments and CI/CD pipelines, and writing automated tests.",
-  "currentRole": "Current position",
+  "role": "Software Engineer",
+  "viewProjects": "View projects",
+  "getInTouch": "Get in touch",
+  "workOn": "What I work on",
+  "area": {
+    "web": {
+      "title": "Web applications",
+      "text": "Building and running products for clients and online communities."
+    },
+    "data": {
+      "title": "Data and reporting",
+      "text": "Tuning slow queries, building reports and moving data between systems."
+    },
+    "automation": {
+      "title": "Automation and AI",
+      "text": "Writing scrapers, background workers and video tools that use AI."
+    }
+  },
+  "aboutText": "I'm a software engineer based in Tbilisi, Georgia. In the age of AI, code is cheap. Engineering isn't. That's the part I focus on.",
+  "skillData": "Data",
+  "skillBackend": "Backend",
+  "skillFrontend": "Frontend",
+  "skillInfra": "Infrastructure",
+  "skillAi": "AI",
+  "skillAiItems": "LLM APIs, RAG, tool calling, voice generation, AI-assisted development",
+  "currentRole": "May 2026 – Present",
   "experienceRole": "Junior PL/SQL Developer / Reporting Specialist",
-  "experienceSummary": "I develop and maintain Oracle reports used across the bank. The work includes PL/SQL development, query optimization, data validation, and support for reporting teams.",
+  "experienceSummary": "I develop and maintain Oracle PL/SQL reports used across the bank's operations.",
   "experienceResponsibilities": [
-    "I develop, maintain, and optimize Oracle PL/SQL reports used in banking operations.",
-    "I refactor SQL queries, procedures, and views to improve performance and remove duplicated logic.",
-    "I work with teams responsible for operations, cashier processes, credit and loans, merchant reporting, commissions, AML, National Bank reporting, and the data warehouse.",
-    "I support the migration of Unistream reporting and transaction data into the data warehouse through validation and analysis."
+    "Refactoring SQL queries, procedures and views to make them faster and remove duplicated logic.",
+    "Working with teams across the bank, including operations, lending, AML, National Bank reporting and the data warehouse.",
+    "Helping migrate reporting and transaction data into the data warehouse."
   ],
-  "viewLinkedIn": "View role on LinkedIn",
-  "workTitle": "Freelance and independent projects.",
-  "workIntro": "Production web applications and automation systems I have built for clients and growing online communities.",
-  "openProject": "Open project",
   "liveSite": "Live site",
   "watchExample": "Watch example",
-  "project1Description": "An automated technology news platform that turns incoming stories into personalized daily digests. I helped build the Flask and MongoDB backend, scheduling and email delivery pipeline, responsive frontend, dark mode, and editorial CMS.",
-  "project2Description": "A customizable profile platform where gamers build and share collections around the games they love. I work across the Next.js frontend, Django and PostgreSQL backend, and the architectural decisions connecting the full product.",
-  "project3Description": "A production platform serving a creator community of more than 5,000 members. I maintain and deploy the complete Next.js and FastAPI stack, including PostgreSQL, Redis, and Whop OAuth. Our scrapers collect large volumes of TikTok data while Celery workers handle substantial processing queues.",
-  "project4Description": "A configurable video production engine I built for a client. It converts a script into a finished short-form video with generated voiceover, captions, intro cards, animation, and final composition. Videos produced with it have accumulated millions of views.",
-  "project5Description": "An end-to-end media automation system that turns multi-character scripts into convincing iMessage-style videos. It generates chat visuals, creates and processes AI voiceovers, synchronizes timing, and renders the finished video automatically.",
-  "haveProject": "Want to work together?",
-  "contactTitleOne": "Send me",
-  "contactTitleTwo": "a message.",
-  "email": "Your email",
+  "project1Description": "Subscribers get a personalized tech news digest by email every morning. I helped build the backend, the scheduled email delivery, the frontend and the editorial CMS.",
+  "project2Description": "Gamers build profile pages around their favorite games and share them with others. I work across the whole stack.",
+  "project3Description": "A platform for a community of over 10,000 TikTok creators. I maintain and deploy it, along with the scrapers that collect TikTok data and the workers that process it.",
+  "project4Description": "A tool that turns a script into a captioned short-form video with voiceover, an intro card and animated cuts. Videos made with it have reached millions of views.",
+  "project5Description": "Generates iMessage-style videos from multi-character scripts. It renders the chat, creates the AI voices, syncs the timing and edits the final video automatically.",
+  "contactText": "For projects, roles or questions, email me or use the form.",
+  "email": "Email",
   "subject": "Subject",
   "message": "Message",
-  "subjectPlaceholder": "Project, role, or question",
-  "messagePlaceholder": "Tell me a little about it...",
-  "send": "Send message"
+  "send": "Send message",
+  "a11y": {
+    "nav": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "lightMode": "Switch to light mode",
+    "darkMode": "Switch to dark mode",
+    "language": "Language"
+  },
+  "skillLanguages": "Languages",
+  "skillLanguagesItems": "Georgian, German, English",
+  "freelanceRole": "Software Engineer",
+  "freelanceMeta": "Freelance · 2022 – 2026",
+  "freelanceSummary": "I built web applications, automation tools and integrations for clients.",
+  "freelanceResponsibilities": [
+    "Working directly with clients, from first requirements to deployment and ongoing maintenance.",
+    "Building and maintaining a platform for a community of over 10,000 TikTok creators.",
+    "Integrating payment providers with business and accounting systems.",
+    "Building video automation tools whose videos reached millions of views."
+  ],
+  "clientProject": "Client project"
 }

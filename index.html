@@ -2,12 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-
-    <meta name="theme-color" content="#11120e" />
-    <meta name="description" content="Levani Vashadze — PL/SQL developer and full-stack software engineer in Tbilisi, Georgia." />
-    <link rel="icon" href="/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Levani Vashadze — Software Developer</title>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="description" content="Levani Vashadze, software engineer in Tbilisi, Georgia."/>
+    <link rel="icon" href="/favicon.ico"/>
+    <title>Levani Vashadze</title>
+    <script>
+      (function () {
+        var theme;
+        try { theme = localStorage.getItem("theme"); } catch (e) {}
+        if (!theme) {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+          document.querySelector('meta[name="theme-color"]').setAttribute("content", "#1c1c1f");
+        }
+      })();
+    </script>
 </head>
 <body>
 <div id="root"></div>

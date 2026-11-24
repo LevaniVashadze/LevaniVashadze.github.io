@@ -1,42 +1,72 @@
 {
   "loading": "Lädt...",
-  "home": "Start",
   "about": "Über mich",
   "experience": "Berufserfahrung",
   "work": "Projekte",
-  "freelance": "Freelance-Projekte",
   "contact": "Kontakt",
-  "heroKicker": "PL/SQL-Entwickler / Full-Stack-Entwickler",
-  "heroStatement": "Ich entwickle datenintensive Reportingsysteme mit Oracle PL/SQL und veröffentliche Full-Stack-Produkte mit Python und React.",
-  "exploreWork": "Projekte anzeigen",
-  "aboutText": "Ich arbeite bei Silk Bank als Junior PL/SQL Developer und Reporting Specialist. Im Alltag beschäftige ich mich mit Oracle SQL, PL/SQL, Bankberichten und Datenvalidierung. Außerhalb der Bank entwickle und betreue ich Webanwendungen und Automatisierungstools mit Python, FastAPI, Django, React und Next.js. Außerdem habe ich Erfahrung mit Cloud-Deployments, unter anderem auf AWS, sowie mit Docker-Umgebungen, CI/CD-Pipelines und automatisierten Tests.",
-  "currentRole": "Aktuelle Position",
+  "role": "Softwareentwickler",
+  "viewProjects": "Projekte ansehen",
+  "getInTouch": "Kontakt aufnehmen",
+  "workOn": "Woran ich arbeite",
+  "area": {
+    "web": {
+      "title": "Webanwendungen",
+      "text": "Produkte für Kunden und Online-Communities entwickeln und betreiben."
+    },
+    "data": {
+      "title": "Daten und Reporting",
+      "text": "Langsame Abfragen optimieren, Berichte erstellen und Daten zwischen Systemen migrieren."
+    },
+    "automation": {
+      "title": "Automatisierung und KI",
+      "text": "Scraper, Hintergrund-Worker und KI-gestützte Videotools schreiben."
+    }
+  },
+  "aboutText": "Ich bin Softwareentwickler in Tiflis, Georgien. Im Zeitalter von KI ist Code billig. Engineering nicht. Darauf konzentriere ich mich.",
+  "skillData": "Daten",
+  "skillBackend": "Backend",
+  "skillFrontend": "Frontend",
+  "skillInfra": "Infrastruktur",
+  "skillAi": "KI",
+  "skillAiItems": "LLM-APIs, RAG, Tool Calling, Sprachgenerierung, KI-gestützte Entwicklung",
+  "currentRole": "Mai 2026 – heute",
   "experienceRole": "Junior PL/SQL Developer / Reporting Specialist",
-  "experienceSummary": "Ich entwickle und betreue Oracle-Berichte, die von verschiedenen Teams der Bank verwendet werden. Dazu gehören PL/SQL-Entwicklung, Abfrageoptimierung, Datenvalidierung und Unterstützung der Reporting-Teams.",
+  "experienceSummary": "Ich entwickle und betreue Oracle-PL/SQL-Berichte, die im gesamten Bankbetrieb verwendet werden.",
   "experienceResponsibilities": [
-    "Ich entwickle, betreue und optimiere Oracle-PL/SQL-Berichte für den Bankbetrieb.",
-    "Ich überarbeite SQL-Abfragen, Prozeduren und Views, um die Performance zu verbessern und doppelte Logik zu entfernen.",
-    "Ich arbeite mit Teams aus Operations, Kasse, Kredit, Händler- und Provisionsreporting, AML, Nationalbank-Reporting und Data Warehouse zusammen.",
-    "Ich unterstütze die Migration von Unistream-Berichts- und Transaktionsdaten ins Data Warehouse durch Validierung und Analyse."
+    "Überarbeitung von SQL-Abfragen, Prozeduren und Views, um sie schneller zu machen und doppelte Logik zu entfernen.",
+    "Zusammenarbeit mit Teams aus der ganzen Bank, darunter Operations, Kreditgeschäft, AML, Nationalbank-Reporting und Data Warehouse.",
+    "Unterstützung bei der Migration von Berichts- und Transaktionsdaten ins Data Warehouse."
   ],
-  "viewLinkedIn": "Position auf LinkedIn",
-  "workTitle": "Freelance- und unabhängige Projekte.",
-  "workIntro": "Produktive Webanwendungen und Automatisierungssysteme, die ich für Kunden und wachsende Online-Communities entwickelt habe.",
-  "openProject": "Projekt öffnen",
   "liveSite": "Live-Seite",
   "watchExample": "Beispiel ansehen",
-  "project1Description": "Eine automatisierte Tech-News-Plattform, die eingehende Meldungen in personalisierte tägliche Zusammenfassungen verwandelt. Ich arbeitete am Flask- und MongoDB-Backend, an Planung und E-Mail-Versand, am responsiven Frontend, Dark Mode und Redaktions-CMS.",
-  "project2Description": "Eine anpassbare Profilplattform, auf der Gamer Sammlungen rund um ihre Lieblingsspiele erstellen und teilen. Ich arbeite am Next.js-Frontend, am Django- und PostgreSQL-Backend sowie an der Architektur des gesamten Produkts.",
-  "project3Description": "Eine produktive Plattform für eine Creator-Community mit mehr als 5.000 Mitgliedern. Ich betreue und deploye den vollständigen Next.js- und FastAPI-Stack mit PostgreSQL, Redis und Whop OAuth. Unsere Scraper sammeln große Mengen TikTok-Daten, die von umfangreichen Celery-Queues verarbeitet werden.",
-  "project4Description": "Eine Video-Engine, die Skripte in komplette Kurzvideos mit Voiceover, Untertiteln, Animationen und finalem Schnitt verwandelt. Die Ergebnisse erzielten Millionen Aufrufe.",
-  "project5Description": "Ein Tool, das Dialogskripte mit mehreren Figuren in realistische iMessage-Videos mit KI-Stimmen, Bildern, Timing und automatischem Schnitt verwandelt.",
-  "haveProject": "Möchtest du zusammenarbeiten?",
-  "contactTitleOne": "Schreib mir",
-  "contactTitleTwo": "eine Nachricht.",
-  "email": "Deine E-Mail",
+  "project1Description": "Abonnenten bekommen jeden Morgen eine personalisierte Tech-News-Zusammenfassung per E-Mail. Ich habe am Backend, am geplanten E-Mail-Versand, am Frontend und am Redaktions-CMS mitgearbeitet.",
+  "project2Description": "Gamer erstellen Profilseiten rund um ihre Lieblingsspiele und teilen sie mit anderen. Ich arbeite am gesamten Stack.",
+  "project3Description": "Eine Plattform für eine Community von über 10.000 TikTok-Creators. Ich betreue und deploye sie, zusammen mit den Scrapern, die TikTok-Daten sammeln, und den Workern, die sie verarbeiten.",
+  "project4Description": "Ein Tool, das aus einem Skript ein untertiteltes Kurzvideo mit Voiceover, Intro und animierten Schnitten macht. Die damit erstellten Videos haben Millionen Aufrufe erreicht.",
+  "project5Description": "Erzeugt Videos im iMessage-Stil aus Dialogskripten mit mehreren Figuren. Das Tool rendert den Chat, erzeugt die KI-Stimmen, synchronisiert das Timing und schneidet das fertige Video automatisch.",
+  "contactText": "Für Projekte, Stellen oder Fragen schreib mir eine E-Mail oder nutze das Formular.",
+  "email": "E-Mail",
   "subject": "Betreff",
   "message": "Nachricht",
-  "subjectPlaceholder": "Projekt, Position oder Frage",
-  "messagePlaceholder": "Erzähl mir kurz, worum es geht...",
-  "send": "Nachricht senden"
+  "send": "Nachricht senden",
+  "a11y": {
+    "nav": "Hauptnavigation",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "lightMode": "Zum hellen Modus wechseln",
+    "darkMode": "Zum dunklen Modus wechseln",
+    "language": "Sprache"
+  },
+  "skillLanguages": "Sprachen",
+  "skillLanguagesItems": "Georgisch, Deutsch, Englisch",
+  "freelanceRole": "Softwareentwickler",
+  "freelanceMeta": "Freiberuflich · 2022 – 2026",
+  "freelanceSummary": "Ich habe Webanwendungen, Automatisierungstools und Integrationen für Kunden entwickelt.",
+  "freelanceResponsibilities": [
+    "Direkte Zusammenarbeit mit Kunden, von den ersten Anforderungen bis zum Deployment und zur laufenden Wartung.",
+    "Entwicklung und Betreuung einer Plattform für eine Community von über 10.000 TikTok-Creators.",
+    "Integration von Zahlungsanbietern in Geschäfts- und Buchhaltungssysteme.",
+    "Entwicklung von Videoautomatisierungstools, deren Videos Millionen Aufrufe erreicht haben."
+  ],
+  "clientProject": "Kundenprojekt"
 }

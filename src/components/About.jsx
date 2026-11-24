@@ -1,22 +1,13 @@
 import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
-const skills = [
-  "Oracle PL/SQL",
-  "SQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Python",
-  "Django",
-  "Flask",
-  "FastAPI",
-  "React",
-  "Next.js",
-  "Tailwind CSS",
-  "Docker",
-  "AWS",
-  "CI/CD",
-  "Automated testing",
+const skillGroups = [
+  { label: "skillBackend", items: "Python, FastAPI, Django, Flask" },
+  { label: "skillFrontend", items: "React, Next.js, Tailwind CSS" },
+  { label: "skillData", items: "PostgreSQL, MongoDB, Oracle PL/SQL" },
+  { label: "skillInfra", items: "Docker, AWS, CI/CD" },
+  { label: "skillAi", items: "skillAiItems", translate: true },
+  { label: "skillLanguages", items: "skillLanguagesItems", translate: true },
 ];
 
 const About = () => {
@@ -24,18 +15,19 @@ const About = () => {
 
   return (
     <Element name="About">
-      <section id="About" className="about-section section-shell">
-        <div className="about-layout">
-          <div className="about-copy reveal">
-            <p>{t("aboutText")}</p>
-          </div>
+      <section id="About" className="section shell" tabIndex={-1}>
+        <h2 className="section-label">{t("about")}</h2>
+        <div className="section-body reveal">
+          <p className="lead">{t("aboutText")}</p>
+          <dl className="skills">
+            {skillGroups.map((group) => (
+              <div key={group.label}>
+                <dt>{t(group.label)}</dt>
+                <dd>{group.translate ? t(group.items) : group.items}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
-
-        <ul className="skills-list reveal" aria-label="Skills">
-          {skills.map((skill) => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
       </section>
     </Element>
   );

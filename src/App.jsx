@@ -4,18 +4,12 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
-import ProgressBar from "./components/ProgressBar.jsx";
+import Footer from "./components/Footer";
 import { Suspense, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import Footer from "./components/Footer.jsx";
 
 function App() {
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    document.documentElement.classList.add("js");
-    return () => document.documentElement.classList.remove("js");
-  }, []);
 
   useEffect(() => {
     const language = (i18n.resolvedLanguage || "en").split("-")[0];
@@ -23,20 +17,22 @@ function App() {
   }, [i18n.resolvedLanguage]);
 
   return (
-    <div className="App">
-      <Suspense fallback={<div className="loading-screen">{t("loading")}</div>}>
-        <Navbar />
-        <main>
-          <Home />
-          <About />
-          <Experience />
-          <Work />
-          <Contact />
-        </main>
-        <ProgressBar />
-        <Footer />
-      </Suspense>
-    </div>
+    <Suspense fallback={<div className="loading-screen">{t("loading")}</div>}>
+      <div className="backdrop" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
+      <Navbar />
+      <main>
+        <Home />
+        <About />
+        <Experience />
+        <Work />
+        <Contact />
+      </main>
+      <Footer />
+    </Suspense>
   );
 }
 

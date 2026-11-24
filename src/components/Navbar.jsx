@@ -1,14 +1,44 @@
 import { Link } from "react-scroll";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageDropdown from "./LanguageDropdown";
+import ThemeToggle from "./ThemeToggle";
+import { focusSection, scrollProps } from "../motion";
 
-const navItems = ["About", "Experience", "Work", "Contact"];
+const navItems = [
+  { to: "About", label: "about" },
+  { to: "Experience", label: "experience" },
+  { to: "Work", label: "work" },
+  { to: "Contact", label: "contact" },
+];
 
 const Navbar = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [logoClicks, setLogoClicks] = useState(0);
+  const navRef = useRef(null);
+  const linksRef = useRef(null);
+  const toggleRef = useRef(null);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    linksRef.current?.querySelector("a")?.focus();
+    const onKey = (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    const onPointerDown = (event) => {
+      if (!navRef.current?.contains(event.target)) setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("pointerdown", onPointerDown);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("pointerdown", onPointerDown);
+    };
+  }, [open]);
 
   const closeMenu = () => setOpen(false);
   const handleWordmarkClick = () => {
@@ -20,57 +50,59 @@ const Navbar = () => {
 
   return (
     <header className="site-header">
-      <nav className="nav-shell" aria-label="Main navigation">
+      <nav ref={navRef} className="nav glass" aria-label={t("a11y.nav")}>
         <Link
           to="Home"
-          smooth
-          duration={650}
-          className={`wordmark${showEasterEgg ? " wordmark--easter-egg" : ""}${completeEasterEgg ? " wordmark--easter-egg--complete" : ""}`}
+          href="#Home"
+          {...scrollProps}
+          offset={0}
+          className={`wordmark${showEasterEgg ? " wordmark--easter-egg" : ""}`}
           onClick={handleWordmarkClick}
-          aria-label={showEasterEgg ? `Easter egg ${completeEasterEgg ? "67" : "6"}` : "Levani Vashadze"}
+          aria-label="Levani Vashadze"
         >
-          {showEasterEgg ? (
-            <>
-              <span>6</span>
-              {completeEasterEgg && <span>7</span>}
-            </>
-          ) : (
-            <>
-              <span>LEVANI</span>
-              <span>VASHADZE</span>
-            </>
-          )}
+          {showEasterEgg ? (completeEasterEgg ? "67" : "6") : "Levani Vashadze"}
         </Link>
 
-        <div className={`nav-links ${open ? "is-open" : ""}`}>
-          {navItems.map((item, index) => (
+        <div ref={linksRef} id="nav-links" className={`nav-links${open ? " is-open" : ""}`}>
+          {navItems.map((item) => (
             <Link
-              key={item}
-              to={item}
+              key={item.to}
+              to={item.to}
+              href={`#${item.to}`}
               spy
-              smooth
-              duration={650}
-              offset={-70}
+              {...scrollProps}
               activeClass="is-active"
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu();
+                focusSection(item.to);
+              }}
             >
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              {t(item.toLowerCase())}
+              {t(item.label)}
             </Link>
           ))}
-          <LanguageDropdown />
         </div>
 
-        <button
-          type="button"
-          className={`menu-toggle ${open ? "is-open" : ""}`}
-          onClick={() => setOpen((value) => !value)}
-          aria-expanded={open}
-          aria-label={open ? "Close menu" : "Open menu"}
-        >
-          <span />
-          <span />
-        </button>
+        <div className="nav-controls">
+          <LanguageDropdown />
+          <ThemeToggle />
+          <button
+            ref={toggleRef}
+            type="button"
+            className="icon-button menu-toggle"
+            onClick={() => setOpen((value) => !value)}
+            aria-expanded={open}
+            aria-controls="nav-links"
+            aria-label={open ? t("a11y.closeMenu") : t("a11y.openMenu")}
+          >
+            <svg className="icon" viewBox="0 0 24 24" aria-hidden="true">
+              {open ? (
+                <path d="M6 6l12 12M18 6 6 18" />
+              ) : (
+                <path d="M4 8h16M4 16h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
     </header>
   );
